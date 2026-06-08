@@ -3,12 +3,324 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IDENEL Chile</title>
+  <title>IDENEL Chile | Cosmética Coreana Profesional</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f4ef;
+      color: #1d1d1d;
+    }
+
+    header {
+      background: white;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e8ded4;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #b89b6b;
+      font-weight: normal;
+    }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #1d1d1d;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 8%;
+      background: linear-gradient(135deg, #ffffff 0%, #f4e9dd 100%);
+    }
+
+    .hero-text {
+      max-width: 620px;
+    }
+
+    .eyebrow {
+      color: #b89b6b;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 76px;
+      line-height: 0.95;
+      margin: 0 0 22px;
+    }
+
+    h2 {
+      font-size: 34px;
+      line-height: 1.15;
+      font-weight: 400;
+      margin: 0 0 24px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #5e5e5e;
+    }
+
+    .buttons {
+      margin-top: 34px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-dark {
+      background: #111;
+      color: white;
+    }
+
+    .btn-light {
+      border: 1px solid #111;
+      color: #111;
+    }
+
+    section {
+      padding: 90px 8%;
+      background: white;
+    }
+
+    section.alt {
+      background: #f8f4ef;
+    }
+
+    .center {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e8ded4;
+      padding: 34px;
+      border-radius: 24px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 23px;
+    }
+
+    .contact {
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .contact p {
+      color: #d8d8d8;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      background: #25d366;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+
+    footer {
+      background: #050505;
+      color: white;
+      padding: 40px 8%;
+      text-align: center;
+    }
+
+    footer p {
+      color: #bdbdbd;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 60px 6%;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>IDENEL Chile</h1>
-  <p>Cosmética coreana profesional antienvejecimiento.</p>
+  <header>
+    <div class="logo">IDENEL<span> Chile</span></div>
+    <nav>
+      <a href="#altum">Altum™ Peptide</a>
+      <a href="#profesional">Profesional</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="hero">
+      <div class="hero-text">
+        <div class="eyebrow">Cosmética coreana profesional</div>
+        <h1>IDENEL Chile</h1>
+        <h2>La nueva generación de cuidado antienvejecimiento profesional</h2>
+        <p>
+          Tecnología avanzada con Altum™ Peptide y microespículas refinadas,
+          diseñada para profesionales de la estética y rutinas de cuidado en casa.
+        </p>
+
+        <div class="buttons">
+          <a href="#productos" class="btn btn-dark">Ver productos</a>
+          <a href="#contacto" class="btn btn-light">Hazte socio</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="altum">
+      <div class="center">
+        <div class="eyebrow">Tecnología exclusiva</div>
+        <h2>Altum™ Peptide</h2>
+        <p>
+          Altum™ Peptide combina péptidos avanzados con tecnología de microespículas
+          refinadas para favorecer la entrega de activos cosméticos en la piel.
+        </p>
+      </div>
+    </section>
+
+    <section id="profesional" class="alt">
+      <div class="center">
+        <div class="eyebrow">Línea profesional</div>
+        <h2>Tratamientos para cabina</h2>
+        <p>
+          Programas profesionales personalizables según las necesidades de cada piel.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Aging & Anti-wrinkle</h3>
+          <p>Protocolos enfocados en signos visibles de envejecimiento y firmeza.</p>
+        </div>
+
+        <div class="card">
+          <h3>Regenerating & Calming</h3>
+          <p>Apoyo cosmético para pieles sensibles, reactivas o post tratamiento.</p>
+        </div>
+
+        <div class="card">
+          <h3>Brightening & Tone-Up</h3>
+          <p>Rutinas orientadas a luminosidad, tono uniforme y piel apagada.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos">
+      <div class="center">
+        <div class="eyebrow">Catálogo IDENEL Chile</div>
+        <h2>Productos destacados</h2>
+        <p>
+          Línea profesional y cuidado en casa para acompañar protocolos estéticos avanzados.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Peptaxel Professional</h3>
+          <p>Programa profesional para protocolos personalizados en cabina.</p>
+        </div>
+
+        <div class="card">
+          <h3>Intensive Repair Essential Sheet Mask</h3>
+          <p>Mascarilla intensiva para hidratar, calmar y apoyar la recuperación cosmética.</p>
+        </div>
+
+        <div class="card">
+          <h3>Daily Sun Serum</h3>
+          <p>Protección diaria ligera para complementar el cuidado posterior.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="center">
+        <div class="eyebrow">Distribución profesional</div>
+        <h2>Hazte socio IDENEL Chile</h2>
+        <p>
+          Accede a productos, capacitaciones, soporte comercial y beneficios para
+          centros estéticos, clínicas y profesionales.
+        </p>
+
+        <div class="buttons" style="justify-content:center;">
+          <a href="https://wa.me/56944499756" class="btn btn-dark">Hablar por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a href="https://wa.me/56944499756" class="whatsapp">WhatsApp</a>
+
+  <footer>
+    <strong>IDENEL Chile</strong>
+    <p>Cosmética coreana profesional antienvejecimiento.</p>
+    <p>Distribuido en Chile por Smart Medical Lab S.P.A.</p>
+  </footer>
 
 </body>
 </html>
