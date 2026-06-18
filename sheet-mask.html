@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDENEL Intensive Repair Essential Sheet Mask | IDENEL Chile</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f7;
+      color: #1d1d1d;
+    }
+
+    header {
+      background: white;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e8e8e8;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #1d1d1d;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #e9e9e9 100%);
+      padding: 90px 8%;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1;
+      margin: 0 0 22px;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.15;
+      margin: 0 0 24px;
+      font-weight: 400;
+    }
+
+    h3 {
+      font-size: 26px;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .buttons {
+      margin-top: 34px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-dark {
+      background: #111;
+      color: white;
+    }
+
+    .btn-light {
+      border: 1px solid #111;
+      color: #111;
+      background: white;
+    }
+
+    section {
+      padding: 90px 8%;
+      background: white;
+    }
+
+    section.alt {
+      background: #f4f4f4;
+    }
+
+    .center {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 55px;
+    }
+
+    .image-full {
+      max-width: 760px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.08);
+    }
+
+    .image-full img {
+      width: 100%;
+      display: block;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e6e6e6;
+      padding: 34px;
+      border-radius: 24px;
+    }
+
+    .card strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .product-images {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .product-images img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+    }
+
+    .recommend-list {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 21px;
+      line-height: 2;
+      color: #222;
+    }
+
+    .recommend-list div {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 16px 0;
+    }
+
+    .info-table {
+      max-width: 1000px;
+      margin: 0 auto;
+      border-top: 1px solid #222;
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      border-bottom: 1px solid #ddd;
+      padding: 18px 0;
+      gap: 24px;
+    }
+
+    .info-row strong {
+      font-size: 16px;
+    }
+
+    .info-row span {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .contact {
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .contact p {
+      color: #d8d8d8;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      background: #25d366;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      z-index: 20;
+    }
+
+    footer {
+      background: #050505;
+      color: white;
+      padding: 40px 8%;
+      text-align: center;
+    }
+
+    footer p {
+      color: #bdbdbd;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        display: none;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-row {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 70px 6%;
+      }
+
+      .hero {
+        padding: 70px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">IDENEL</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#ingredientes">Ingredientes</a>
+      <a href="#uso">Modo de uso</a>
+      <a href="#contacto">Comprar</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="eyebrow">IDENEL Chile · Cuidado en casa</div>
+      <h1>Intensive Repair Essential Sheet Mask</h1>
+      <p>
+        Mascarilla facial intensiva diseñada para hidratar, calmar y apoyar la recuperación
+        cosmética de la piel cansada, sensible o expuesta a tratamientos estéticos.
+      </p>
+
+      <div class="buttons">
+        <a href="#contacto" class="btn btn-dark">Consultar por WhatsApp</a>
+        <a href="index.html" class="btn btn-light">Volver al inicio</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="image-full">
+        <img src="sheet-mask-1.jpg" alt="IDENEL Intensive Repair Essential Sheet Mask">
+      </div>
+    </section>
+
+    <section id="beneficios" class="alt">
+      <div class="center">
+        <div class="eyebrow">Beneficios principales</div>
+        <h2>Ultimate care in a single sheet</h2>
+        <p>
+          Una solución de cuidado intensivo para pieles que buscan hidratación profunda,
+          efecto calmante y soporte de barrera cutánea.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <strong>Repair Solution</strong>
+          <p>Ayuda a restaurar la apariencia saludable y vital de la piel.</p>
+        </div>
+
+        <div class="card">
+          <strong>Hidratación intensa</strong>
+          <p>Apoya la barrera cutánea y entrega hidratación profunda para una piel más resistente.</p>
+        </div>
+
+        <div class="card">
+          <strong>Efecto calmante</strong>
+          <p>Diseñada para piel cansada, sensible o expuesta a irritantes externos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="product-images">
+        <img src="sheet-mask-2.jpg" alt="Beneficios IDENEL Sheet Mask">
+        <img src="sheet-mask-3.jpg" alt="Ingredientes IDENEL Sheet Mask">
+      </div>
+    </section>
+
+    <section id="ingredientes" class="alt">
+      <div class="center">
+        <div class="eyebrow">Ingredientes clave</div>
+        <h2>Fórmula intensiva para piel irritada</h2>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <strong>PDRN derivado de salmón</strong>
+          <p>Ingrediente cosmético orientado al apoyo de la recuperación y resiliencia de la piel.</p>
+        </div>
+
+        <div class="card">
+          <strong>Glutatión</strong>
+          <p>Antioxidante asociado a luminosidad y apoyo frente al estrés oxidativo.</p>
+        </div>
+
+        <div class="card">
+          <strong>EGF y ceramidas</strong>
+          <p>Apoyo a la barrera cutánea, hidratación y cuidado de la integridad de la piel.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="product-images">
+        <img src="sheet-mask-4.jpg" alt="EGF y Ceramida IDENEL">
+        <img src="sheet-mask-5.jpg" alt="Fórmula IDENEL Intensive Repair">
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="center">
+        <div class="eyebrow">Recomendado para</div>
+        <h2>Piel que necesita cuidado calmante e hidratante</h2>
+      </div>
+
+      <div class="recommend-list">
+        <div>✓ Piel que necesita aftercare post peeling o tratamientos dermatológicos.</div>
+        <div>✓ Piel con sensación de irritación o sensibilidad.</div>
+        <div>✓ Personas que buscan hidratación sin sensación pegajosa.</div>
+        <div>✓ Piel opaca, cansada o con pérdida de vitalidad.</div>
+        <div>✓ Piel sensible que busca una mascarilla de soporte cosmético.</div>
+      </div>
+    </section>
+
+    <section id="uso">
+      <div class="product-images">
+        <img src="sheet-mask-6.jpg" alt="Textura IDENEL Sheet Mask">
+        <img src="sheet-mask-7.jpg" alt="Modo de uso IDENEL Sheet Mask">
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="center">
+        <div class="eyebrow">Rutina</div>
+        <h2>IDENEL Care Routine</h2>
+        <p>
+          Puede incorporarse dentro de una rutina de cuidado en casa o como complemento
+          posterior a protocolos profesionales, según indicación del profesional tratante.
+        </p>
+      </div>
+
+      <div class="image-full">
+        <img src="sheet-mask-8.jpg" alt="Rutina IDENEL Care Routine">
+      </div>
+    </section>
+
+    <section>
+      <div class="center">
+        <div class="eyebrow">Información del producto</div>
+        <h2>Ficha técnica resumida</h2>
+      </div>
+
+      <div class="info-table">
+        <div class="info-row">
+          <strong>Producto</strong>
+          <span>IDENEL Intensive Repair Essential Sheet Mask</span>
+        </div>
+
+        <div class="info-row">
+          <strong>Funcionalidad</strong>
+          <span>Iluminación y cuidado antiedad cosmético.</span>
+        </div>
+
+        <div class="info-row">
+          <strong>Contenido</strong>
+          <span>26 ml / 0.87 fl. oz x 10 unidades.</span>
+        </div>
+
+        <div class="info-row">
+          <strong>País de fabricación</strong>
+          <span>República de Corea.</span>
+        </div>
+
+        <div class="info-row">
+          <strong>Modo de uso</strong>
+          <span>
+            Después de limpiar el rostro, aplicar tónico. Abrir la mascarilla y colocarla
+            sobre el rostro evitando ojos y boca. Dejar actuar 10 a 20 minutos. Retirar y
+            dar suaves toques hasta absorber la esencia restante.
+          </span>
+        </div>
+
+        <div class="info-row">
+          <strong>Precauciones</strong>
+          <span>
+            Solo para uso externo. Suspender su uso si aparece irritación. Mantener fuera
+            del alcance de niños. Evitar contacto con los ojos.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="center">
+        <div class="eyebrow">IDENEL Chile</div>
+        <h2>Consulta disponibilidad en Chile</h2>
+        <p>
+          Escríbenos por WhatsApp para información comercial, precios, disponibilidad
+          y venta profesional.
+        </p>
+
+        <div class="buttons">
+          <a href="https://wa.me/56944499756?text=Hola,%20quiero%20información%20sobre%20IDENEL%20Intensive%20Repair%20Essential%20Sheet%20Mask" class="btn btn-dark">
+            Hablar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a href="https://wa.me/56944499756?text=Hola,%20quiero%20información%20sobre%20IDENEL%20Intensive%20Repair%20Essential%20Sheet%20Mask" class="whatsapp">
+    WhatsApp
+  </a>
+
+  <footer>
+    <strong>IDENEL Chile</strong>
+    <p>Cosmética coreana profesional.</p>
+    <p>Distribuido en Chile por Smart Medical Lab S.P.A.</p>
+  </footer>
+
+</body>
+</html>
