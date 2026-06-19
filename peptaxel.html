@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDENEL Peptaxel | IDENEL Chile</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8fb;
+      color: #1d1d1d;
+    }
+
+    header {
+      background: white;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e5eaf0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #1d1d1d;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #dfe9f5 100%);
+      padding: 95px 8%;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: #45698f;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 92px);
+      line-height: 1;
+      margin: 0 0 22px;
+      font-weight: 500;
+      color: #234365;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.15;
+      margin: 0 0 24px;
+      font-weight: 400;
+    }
+
+    h3 {
+      font-size: 26px;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .hero p {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .buttons {
+      margin-top: 34px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-dark {
+      background: #234365;
+      color: white;
+    }
+
+    .btn-light {
+      border: 1px solid #234365;
+      color: #234365;
+      background: white;
+    }
+
+    section {
+      padding: 90px 8%;
+      background: white;
+    }
+
+    section.alt {
+      background: #f6f8fb;
+    }
+
+    .center {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 55px;
+    }
+
+    .image-full {
+      max-width: 820px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.08);
+    }
+
+    .image-full img {
+      width: 100%;
+      display: block;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e5eaf0;
+      padding: 34px;
+      border-radius: 24px;
+    }
+
+    .card strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #234365;
+    }
+
+    .two-images {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .two-images img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+    }
+
+    .recommend-list {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 21px;
+      line-height: 2;
+      color: #222;
+    }
+
+    .recommend-list div {
+      border-bottom: 1px solid #e5eaf0;
+      padding: 16px 0;
+    }
+
+    .steps {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .step {
+      background: white;
+      border: 1px solid #e5eaf0;
+      border-radius: 24px;
+      padding: 32px;
+    }
+
+    .step span {
+      display: inline-block;
+      background: #e8f0f8;
+      color: #234365;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    .contact {
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .contact p {
+      color: #d8d8d8;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      background: #25d366;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      z-index: 20;
+    }
+
+    footer {
+      background: #050505;
+      color: white;
+      padding: 40px 8%;
+      text-align: center;
+    }
+
+    footer p {
+      color: #bdbdbd;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        display: none;
+      }
+
+      .grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 70px 6%;
+      }
+
+      .hero {
+        padding: 70px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">IDENEL</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#protocolo">Protocolo</a>
+      <a href="#recomendado">Recomendado</a>
+      <a href="#contacto">Consultar</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="eyebrow">IDENEL Chile · Línea profesional</div>
+      <h1>PEPTAXEL</h1>
+      <p>
+        Skin booster profesional sin agujas, diseñado para protocolos personalizados
+        según las necesidades de cada piel.
+      </p>
+
+      <div class="buttons">
+        <a href="#contacto" class="btn btn-dark">Consultar por WhatsApp</a>
+        <a href="index.html" class="btn btn-light">Volver al inicio</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="image-full">
+        <img src="peptaxel-1.jpg" alt="IDENEL Peptaxel">
+      </div>
+    </section>
+
+    <section id="beneficios" class="alt">
+      <div class="center">
+        <div class="eyebrow">Tratamiento profesional</div>
+        <h2>Safer and lighter needle-free skin booster</h2>
+        <p>
+          PEPTAXEL ofrece tratamientos personalizados para distintas preocupaciones
+          cutáneas, combinando tecnología de espículas y soluciones concentradas.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <strong>Altum™ Peptide</strong>
+          <p>Alta concentración del ingrediente patentado Altum™ Peptide.</p>
+        </div>
+
+        <div class="card">
+          <strong>Tratamiento personalizado</strong>
+          <p>Protocolos adaptados a las necesidades individuales de la piel.</p>
+        </div>
+
+        <div class="card">
+          <strong>Configuración en 2 pasos</strong>
+          <p>Powder + ampoule para trabajar diferentes objetivos cosméticos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="protocolo">
+      <div class="center">
+        <div class="eyebrow">Protocolo Peptaxel</div>
+        <h2>Configuración profesional en dos pasos</h2>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <span>STEP 1 · Powder</span>
+          <h3>Prejuvenation / Clarifying</h3>
+          <p>
+            Primera fase orientada a preparar y trabajar textura, luminosidad
+            y renovación cosmética de la piel.
+          </p>
+        </div>
+
+        <div class="step">
+          <span>STEP 2 · Ampoule</span>
+          <h3>Anti-melanogenesis / Regeneration</h3>
+          <p>
+            Segunda fase con concentrados seleccionados según el objetivo del protocolo:
+            manchas, regeneración, sensibilidad o signos de envejecimiento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="recomendado" class="alt">
+      <div class="center">
+        <div class="eyebrow">Recomendado para</div>
+        <h2>Protocolos personalizados según condición de piel</h2>
+      </div>
+
+      <div class="recommend-list">
+        <div>✓ Personas preocupadas por arrugas y signos visibles de envejecimiento.</div>
+        <div>✓ Tono irregular, manchas, cicatrices o piel con marcas.</div>
+        <div>✓ Piel problemática, tendencia acneica o piel oleosa.</div>
+        <div>✓ Poros dilatados y textura áspera.</div>
+        <div>✓ Piel que busca luminosidad, firmeza y renovación cosmética.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="two-images">
+        <img src="peptaxel-2.jpg" alt="IDENEL Peptaxel presentación">
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="center">
+        <div class="eyebrow">Evidencia clínica</div>
+        <h2>Evaluación clínica IDENEL Peptaxel</h2>
+        <p>
+          Documentos clínicos de IDENEL describen evaluaciones sobre arrugas faciales,
+          efecto lifting, densidad cutánea, melasma, pigmentación, textura y poros.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <strong>Arrugas y firmeza</strong>
+          <p>Evaluaciones enfocadas en arrugas perioculares, surcos nasolabiales y efecto lifting.</p>
+        </div>
+
+        <div class="card">
+          <strong>Textura y poros</strong>
+          <p>Protocolos observados en relación con textura cutánea y apariencia de poros.</p>
+        </div>
+
+        <div class="card">
+          <strong>Manchas y luminosidad</strong>
+          <p>Evaluaciones vinculadas a melasma, pigmentación y aspecto general de la piel.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="center">
+        <div class="eyebrow">IDENEL Chile</div>
+        <h2>Consulta disponibilidad profesional</h2>
+        <p>
+          Escríbenos por WhatsApp para información comercial, capacitación,
+          protocolos profesionales y venta en Chile.
+        </p>
+
+        <div class="buttons">
+          <a href="https://wa.me/56944499756?text=Hola,%20quiero%20información%20sobre%20IDENEL%20Peptaxel" class="btn btn-dark">
+            Hablar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a href="https://wa.me/56944499756?text=Hola,%20quiero%20información%20sobre%20IDENEL%20Peptaxel" class="whatsapp">
+    WhatsApp
+  </a>
+
+  <footer>
+    <strong>IDENEL Chile</strong>
+    <p>Cosmética coreana profesional.</p>
+    <p>Distribuido en Chile por Smart Medical Lab S.P.A.</p>
+  </footer>
+
+</body>
+</html>
