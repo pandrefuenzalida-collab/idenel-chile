@@ -3,50 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IDENEL Peptaxel | IDENEL Chile</title>
+
+  <title>IDENEL PEPTAXEL | Skin Booster Profesional Sin Inyección | IDENEL Chile</title>
+
+  <meta name="description" content="IDENEL PEPTAXEL Chile: programa profesional con tecnología Altum™ Peptide, microespículas, mezclas personalizadas, cuidados posteriores y protocolos para profesionales.">
 
   <style>
-    body {
+    :root {
+      --blue: #234365;
+      --blue-soft: #e8f0f8;
+      --blue-light: #f6f8fb;
+      --text: #1d1d1d;
+      --muted: #5c6570;
+      --border: #e5eaf0;
+      --dark: #111111;
+      --white: #ffffff;
+      --green: #25d366;
+      --gold: #b89b6b;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f6f8fb;
-      color: #1d1d1d;
+      background: var(--blue-light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     header {
-      background: white;
-      padding: 22px 8%;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      padding: 20px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #e5eaf0;
+      border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 50;
     }
 
     .logo {
       font-size: 26px;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 2px;
+      color: var(--blue);
+    }
+
+    .logo span {
+      color: var(--gold);
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      align-items: center;
     }
 
     nav a {
-      margin-left: 24px;
-      text-decoration: none;
-      color: #1d1d1d;
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    nav a:hover {
+      color: var(--blue);
     }
 
     .hero {
-      background: linear-gradient(135deg, #ffffff 0%, #dfe9f5 100%);
-      padding: 95px 8%;
+      background:
+        radial-gradient(circle at top right, rgba(184, 155, 107, 0.22), transparent 32%),
+        linear-gradient(135deg, #ffffff 0%, #dfe9f5 100%);
+      padding: 100px 8% 85px;
       text-align: center;
     }
 
     .eyebrow {
-      color: #45698f;
+      color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 13px;
@@ -55,90 +109,118 @@
     }
 
     h1 {
-      font-size: clamp(48px, 8vw, 92px);
-      line-height: 1;
-      margin: 0 0 22px;
-      font-weight: 500;
-      color: #234365;
+      font-size: clamp(48px, 8vw, 96px);
+      line-height: 0.95;
+      margin-bottom: 24px;
+      font-weight: 600;
+      color: var(--blue);
     }
 
     h2 {
-      font-size: clamp(30px, 4vw, 48px);
-      line-height: 1.15;
-      margin: 0 0 24px;
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1.12;
+      margin-bottom: 24px;
       font-weight: 400;
+      color: var(--text);
     }
 
     h3 {
-      font-size: 26px;
-      margin-top: 0;
+      font-size: 25px;
+      margin-bottom: 14px;
+      color: var(--text);
     }
 
     p {
       font-size: 18px;
+      color: var(--muted);
       line-height: 1.7;
-      color: #555;
     }
 
     .hero p {
-      max-width: 780px;
+      max-width: 820px;
       margin: 0 auto;
+      font-size: 19px;
     }
 
     .buttons {
       margin-top: 34px;
       display: flex;
-      gap: 14px;
       justify-content: center;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
     .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 15px 28px;
-      border-radius: 40px;
-      text-decoration: none;
+      border-radius: 999px;
       font-weight: bold;
-      display: inline-block;
+      transition: 0.2s ease;
     }
 
     .btn-dark {
-      background: #234365;
-      color: white;
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .btn-dark:hover {
+      background: var(--dark);
     }
 
     .btn-light {
-      border: 1px solid #234365;
-      color: #234365;
-      background: white;
+      background: var(--white);
+      color: var(--blue);
+      border: 1px solid var(--blue);
+    }
+
+    .btn-light:hover {
+      background: var(--blue);
+      color: var(--white);
     }
 
     section {
       padding: 90px 8%;
-      background: white;
+      background: var(--white);
     }
 
     section.alt {
-      background: #f6f8fb;
+      background: var(--blue-light);
     }
 
     .center {
       text-align: center;
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto 55px;
     }
 
     .image-full {
-      max-width: 680px;
+      max-width: 760px;
       margin: 0 auto;
-      background: white;
-      border-radius: 26px;
+      background: var(--white);
+      border-radius: 28px;
       overflow: hidden;
-      box-shadow: 0 25px 70px rgba(0,0,0,0.08);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.09);
     }
 
     .image-full img {
       width: 100%;
-      display: block;
+      height: auto;
+    }
+
+    .two-images {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .two-images img {
+      width: 100%;
+      border-radius: 22px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.08);
     }
 
     .grid {
@@ -149,50 +231,64 @@
       margin: 0 auto;
     }
 
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
     .card {
-      background: white;
-      border: 1px solid #e5eaf0;
+      background: var(--white);
+      border: 1px solid var(--border);
       padding: 34px;
-      border-radius: 24px;
+      border-radius: 26px;
+      box-shadow: 0 12px 40px rgba(35, 67, 101, 0.04);
     }
 
     .card strong {
       display: block;
       font-size: 20px;
       margin-bottom: 12px;
-      color: #234365;
+      color: var(--blue);
     }
 
-    .two-images {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      max-width: 680px;
-      margin: 0 auto;
+    .card .tag {
+      display: inline-block;
+      background: var(--blue-soft);
+      color: var(--blue);
+      padding: 8px 13px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .two-images img {
-      width: 100%;
-      display: block;
-      border-radius: 18px;
-      box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+    .mix-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 36px;
+      box-shadow: 0 15px 45px rgba(35, 67, 101, 0.05);
     }
 
-    .recommend-list {
-      max-width: 900px;
-      margin: 0 auto;
-      font-size: 21px;
-      line-height: 2;
-      color: #222;
+    .mix-card h3 {
+      color: var(--blue);
     }
 
-    .recommend-list div {
-      border-bottom: 1px solid #e5eaf0;
-      padding: 16px 0;
+    .mix-card ul {
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+      margin-top: 12px;
     }
 
     .steps {
-      max-width: 1000px;
+      max-width: 1040px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -200,16 +296,16 @@
     }
 
     .step {
-      background: white;
-      border: 1px solid #e5eaf0;
-      border-radius: 24px;
-      padding: 32px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 34px;
     }
 
     .step span {
       display: inline-block;
-      background: #e8f0f8;
-      color: #234365;
+      background: var(--blue-soft);
+      color: var(--blue);
       padding: 8px 14px;
       border-radius: 999px;
       font-size: 13px;
@@ -217,20 +313,137 @@
       margin-bottom: 16px;
     }
 
+    .timeline {
+      max-width: 980px;
+      margin: 0 auto;
+      border-left: 3px solid var(--blue-soft);
+      padding-left: 26px;
+    }
+
+    .timeline-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 26px;
+      margin-bottom: 18px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      background: var(--blue);
+      border-radius: 50%;
+      position: absolute;
+      left: -35px;
+      top: 31px;
+    }
+
+    .timeline-item strong {
+      color: var(--blue);
+      display: block;
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .faq {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      border: 0;
+      background: var(--white);
+      padding: 22px 24px;
+      text-align: left;
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--blue);
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 24px 24px;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
     .notice {
-      max-width: 900px;
+      max-width: 940px;
       margin: 0 auto;
       background: #eef5fb;
       border: 1px solid #d7e5f2;
-      border-radius: 24px;
-      padding: 34px;
+      border-radius: 28px;
+      padding: 38px;
       text-align: center;
     }
 
-    .contact {
-      background: #111;
-      color: white;
+    .notice.dark {
+      background: var(--dark);
+      color: var(--white);
+      border: none;
+    }
+
+    .notice.dark p {
+      color: #d7d7d7;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .video-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 30px;
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 12px 40px rgba(35, 67, 101, 0.04);
+    }
+
+    .video-placeholder {
+      height: 130px;
+      background:
+        linear-gradient(135deg, rgba(35, 67, 101, 0.1), rgba(184, 155, 107, 0.12));
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      font-weight: bold;
+      margin-bottom: 20px;
       text-align: center;
+      padding: 20px;
+    }
+
+    .contact {
+      background: var(--dark);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: var(--white);
     }
 
     .contact p {
@@ -241,44 +454,54 @@
       position: fixed;
       right: 22px;
       bottom: 22px;
-      background: #25d366;
-      color: white;
+      background: var(--green);
+      color: var(--white);
       padding: 14px 22px;
-      border-radius: 40px;
-      text-decoration: none;
+      border-radius: 999px;
       font-weight: bold;
       box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-      z-index: 20;
+      z-index: 100;
     }
 
     footer {
       background: #050505;
-      color: white;
-      padding: 40px 8%;
+      color: var(--white);
+      padding: 44px 8%;
       text-align: center;
     }
 
     footer p {
       color: #bdbdbd;
       font-size: 14px;
+      margin-top: 8px;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
       nav {
         display: none;
       }
 
       .grid,
-      .steps {
+      .grid-2,
+      .steps,
+      .video-grid {
         grid-template-columns: 1fr;
       }
 
       section {
-        padding: 70px 6%;
+        padding: 72px 6%;
       }
 
       .hero {
-        padding: 70px 6%;
+        padding: 78px 6%;
+      }
+
+      .timeline {
+        padding-left: 20px;
+      }
+
+      .timeline-item::before {
+        left: -29px;
       }
     }
   </style>
@@ -287,12 +510,14 @@
 <body>
 
   <header>
-    <div class="logo">IDENEL</div>
+    <div class="logo">IDENEL <span>Chile</span></div>
+
     <nav>
       <a href="index.html">Inicio</a>
-      <a href="#beneficios">Beneficios</a>
-      <a href="#protocolo">Protocolo</a>
-      <a href="#recomendado">Recomendado</a>
+      <a href="#altum">Altum™</a>
+      <a href="#mezclas">Mezclas</a>
+      <a href="#cuidados">Cuidados</a>
+      <a href="#videos">Videos</a>
       <a href="#contacto">Consultar</a>
     </nav>
   </header>
@@ -301,10 +526,13 @@
 
     <section class="hero">
       <div class="eyebrow">IDENEL Chile · Línea profesional</div>
+
       <h1>PEPTAXEL</h1>
+
       <p>
-        Skin booster profesional sin agujas, diseñado para protocolos personalizados
-        según las necesidades de cada piel.
+        Programa profesional de skin booster sin inyección, basado en la tecnología
+        Altum™ Peptide y microespículas refinadas para protocolos personalizados
+        según la condición de cada piel.
       </p>
 
       <div class="buttons">
@@ -315,47 +543,90 @@
 
     <section>
       <div class="image-full">
-        <img src="peptaxel-1.jpg" alt="IDENEL Peptaxel">
+        <img src="peptaxel-1.jpg" alt="IDENEL PEPTAXEL Chile" loading="lazy">
       </div>
     </section>
 
-    <section id="beneficios" class="alt">
+    <section id="altum" class="alt">
       <div class="center">
-        <div class="eyebrow">Tratamiento profesional</div>
-        <h2>Skin booster profesional sin agujas, seguro y liviano</h2>
+        <div class="eyebrow">Tecnología IDENEL</div>
+        <h2>Altum™ Peptide</h2>
         <p>
-          PEPTAXEL ofrece tratamientos personalizados para distintas preocupaciones
-          cutáneas, combinando tecnología de espículas y soluciones concentradas.
+          Altum™ Peptide combina péptidos con una espícula refinada derivada de esponja marina.
+          Su objetivo es favorecer la entrega de ingredientes activos en la epidermis y apoyar
+          la renovación cosmética de la piel.
         </p>
       </div>
 
       <div class="grid">
         <div class="card">
-          <strong>Altum™ Peptide</strong>
+          <span class="tag">Tecnología</span>
+          <strong>Sistema de microespículas</strong>
           <p>
-            Alta concentración del ingrediente patentado Altum™ Peptide,
-            desarrollado para apoyar protocolos cosméticos profesionales.
+            Las espículas actúan como un vehículo de entrega cosmética y ayudan a que los
+            activos lleguen a las capas superiores de la piel.
           </p>
         </div>
 
         <div class="card">
-          <strong>Tratamiento personalizado</strong>
+          <span class="tag">Acción</span>
+          <strong>Liberación gradual</strong>
           <p>
-            Permite adaptar el protocolo según las necesidades individuales de cada piel.
+            Mientras permanecen en la piel, las microespículas liberan gradualmente péptidos
+            activos y estimulan la renovación superficial.
           </p>
         </div>
 
         <div class="card">
-          <strong>Configuración en dos pasos</strong>
+          <span class="tag">Profesional</span>
+          <strong>Sin inyección</strong>
           <p>
-            Sistema profesional compuesto por polvo y ampolla para trabajar distintos
-            objetivos cosméticos.
+            PEPTAXEL no se comunica como producto inyectable. Se trabaja como protocolo
+            profesional de aplicación tópica con microespículas.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="protocolo">
+    <section id="beneficios">
+      <div class="center">
+        <div class="eyebrow">Tratamiento profesional</div>
+        <h2>Skin booster profesional sin jeringa</h2>
+        <p>
+          PEPTAXEL permite personalizar el tratamiento según las principales preocupaciones
+          cutáneas: envejecimiento, flacidez, manchas, textura irregular, sensibilidad,
+          poros visibles y piel con tendencia a imperfecciones.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <strong>Arrugas y firmeza</strong>
+          <p>
+            Apoyo cosmético para piel con signos visibles de envejecimiento, líneas finas,
+            flacidez y pérdida de elasticidad.
+          </p>
+        </div>
+
+        <div class="card">
+          <strong>Manchas y luminosidad</strong>
+          <p>
+            Protocolos orientados a piel apagada, tono irregular, pigmentación visible
+            y pérdida de vitalidad.
+          </p>
+        </div>
+
+        <div class="card">
+          <strong>Textura y poros</strong>
+          <p>
+            Trabajo cosmético sobre textura áspera, poros visibles, marcas y piel con
+            tendencia a imperfecciones.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="protocolo" class="alt">
       <div class="center">
         <div class="eyebrow">Protocolo Peptaxel</div>
         <h2>Configuración profesional en dos pasos</h2>
@@ -364,52 +635,255 @@
       <div class="steps">
         <div class="step">
           <span>PASO 1 · Polvo</span>
-          <h3>Prejuvenecimiento / Clarificante</h3>
+          <h3>Intensive Solution Powder / TR Solution Powder</h3>
           <p>
-            Primera fase orientada a preparar la piel y trabajar textura,
-            luminosidad y renovación cosmética.
+            El profesional selecciona el polvo según el objetivo del tratamiento.
+            Intensive se orienta a signos de envejecimiento, firmeza y elasticidad.
+            TR se orienta a piel problemática, poros, textura y tendencia acneica.
           </p>
         </div>
 
         <div class="step">
-          <span>PASO 2 · Ampolla</span>
-          <h3>Antimanchas / Regeneración</h3>
+          <span>PASO 2 · Concentrado</span>
+          <h3>Regen Concentrate / Brightening Concentrate</h3>
           <p>
-            Segunda fase con concentrados seleccionados según el objetivo del protocolo:
-            manchas, regeneración, sensibilidad o signos visibles de envejecimiento.
+            Luego se combina con el concentrado correspondiente. Regen apoya hidratación,
+            calma y regeneración cosmética. Brightening se enfoca en luminosidad,
+            tono irregular y pigmentación visible.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="recomendado" class="alt">
+    <section id="mezclas">
       <div class="center">
-        <div class="eyebrow">Recomendado para</div>
-        <h2>Protocolos personalizados según condición de piel</h2>
+        <div class="eyebrow">Mezclas profesionales</div>
+        <h2>Combinaciones PEPTAXEL según necesidad de piel</h2>
+        <p>
+          Estas combinaciones ayudan a ordenar la recomendación profesional según el
+          objetivo principal de cada paciente o cliente.
+        </p>
       </div>
 
-      <div class="recommend-list">
-        <div>✓ Personas preocupadas por arrugas y signos visibles de envejecimiento.</div>
-        <div>✓ Tono irregular, manchas, cicatrices o piel con marcas.</div>
-        <div>✓ Piel problemática, tendencia acneica o piel oleosa.</div>
-        <div>✓ Poros dilatados y textura áspera.</div>
-        <div>✓ Piel que busca luminosidad, firmeza y renovación cosmética.</div>
-      </div>
-    </section>
+      <div class="grid-2">
+        <div class="mix-card">
+          <div class="eyebrow">Combinación 01</div>
+          <h3>Intensive Solution Powder + Regen Concentrate</h3>
+          <p>
+            Cuidado intensivo antienvejecimiento para piel flácida, arrugada o con pérdida
+            de firmeza.
+          </p>
+          <ul>
+            <li>Objetivo: firmeza, lifting cosmético y regeneración.</li>
+            <li>Ideal para: piel madura, líneas finas y pérdida de elasticidad.</li>
+            <li>Apoyo: hidratación, reparación cosmética y barrera cutánea.</li>
+          </ul>
+        </div>
 
-    <section>
-      <div class="two-images">
-        <img src="peptaxel-2.jpg" alt="Presentación profesional IDENEL Peptaxel">
+        <div class="mix-card">
+          <div class="eyebrow">Combinación 02</div>
+          <h3>Intensive Solution Powder + Brightening Concentrate</h3>
+          <p>
+            Antiedad y luminosidad para piel apagada, con tono desigual o signos visibles
+            de envejecimiento.
+          </p>
+          <ul>
+            <li>Objetivo: luminosidad, elasticidad y tono uniforme.</li>
+            <li>Ideal para: piel opaca, manchas visibles y flacidez.</li>
+            <li>Apoyo: mejora cosmética del aspecto general de la piel.</li>
+          </ul>
+        </div>
+
+        <div class="mix-card">
+          <div class="eyebrow">Combinación 03</div>
+          <h3>TR Solution Powder + Regen Concentrate</h3>
+          <p>
+            Cuidado anti-imperfecciones y regenerador para piel con tendencia acneica,
+            sensible o con textura irregular.
+          </p>
+          <ul>
+            <li>Objetivo: piel problemática, poros y recuperación cosmética.</li>
+            <li>Ideal para: marcas, sensibilidad, textura y poros dilatados.</li>
+            <li>Apoyo: calma, hidratación y fortalecimiento de barrera.</li>
+          </ul>
+        </div>
+
+        <div class="mix-card">
+          <div class="eyebrow">Combinación 04</div>
+          <h3>TR Solution Powder + Brightening Concentrate</h3>
+          <p>
+            Cuidado para piel con tendencia acneica y luminosidad, orientado a marcas,
+            tono irregular e hiperpigmentación visible.
+          </p>
+          <ul>
+            <li>Objetivo: tono más uniforme, luminosidad y textura.</li>
+            <li>Ideal para: marcas post-acné, manchas y piel apagada.</li>
+            <li>Apoyo: mejora cosmética del aspecto de imperfecciones.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section class="alt">
       <div class="center">
-        <div class="eyebrow">Evidencia clínica</div>
-        <h2>Evaluación clínica IDENEL Peptaxel</h2>
+        <div class="eyebrow">Presentación profesional</div>
+        <h2>Programa PEPTAXEL</h2>
         <p>
-          Documentos clínicos de IDENEL describen evaluaciones sobre arrugas faciales,
-          efecto lifting, densidad cutánea, melasma, pigmentación, textura y poros.
+          El programa puede incluir diferentes polvos y concentrados para adaptar el
+          tratamiento a cada necesidad estética.
+        </p>
+      </div>
+
+      <div class="two-images">
+        <img src="peptaxel-2.jpg" alt="Presentación profesional PEPTAXEL" loading="lazy">
+      </div>
+    </section>
+
+    <section id="cuidados">
+      <div class="center">
+        <div class="eyebrow">Cuidados posteriores</div>
+        <h2>Qué hacer después del tratamiento</h2>
+        <p>
+          Después de un protocolo con microespículas, la piel puede sentirse sensible,
+          seca, tirante o con picor. El foco debe estar en hidratación, calma,
+          recuperación de barrera y protección solar.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Día del tratamiento</strong>
+          <p>
+            No es necesario lavar el rostro inmediatamente después. Evitar maquillaje,
+            calor excesivo y productos activos. Mantener la piel tranquila e hidratada.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <strong>Día 1</strong>
+          <p>
+            Se puede limpiar suavemente con agua fría o tibia. Evitar limpiadores fuertes,
+            exfoliantes físicos y maquillaje pesado. Usar hidratación y protector solar.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <strong>Días 1 a 3</strong>
+          <p>
+            Puede aparecer sequedad, tirantez, picor o descamación leve. No rascar ni retirar
+            piel descamada. Aplicar productos calmantes e hidratantes.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <strong>Días 3 a 5</strong>
+          <p>
+            Evitar alcohol, sauna, vapor, piscina y ejercicio intenso. Preferir actividades
+            livianas como caminar.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <strong>Después de 7 días</strong>
+          <p>
+            Los activos fuertes como retinoides pueden reintroducirse solo si la piel está
+            recuperada y según indicación profesional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="que-hacer" class="alt">
+      <div class="center">
+        <div class="eyebrow">Qué hacer si...</div>
+        <h2>Guía rápida para reacciones esperadas</h2>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-question">¿Qué hacer si hay picor?</button>
+          <div class="faq-answer">
+            <p>
+              El picor puede aparecer por la acción de las microespículas y la estimulación
+              superficial de la piel. Reforzar hidratación, usar crema calmante y evitar rascar.
+              Si el picor es intenso o persistente, consultar al profesional tratante.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">¿Qué hacer si hay enrojecimiento?</button>
+          <div class="faq-answer">
+            <p>
+              El enrojecimiento leve puede formar parte de la respuesta normal posterior.
+              Mantener la piel hidratada, evitar calor, sol directo, sauna, alcohol y ejercicio
+              intenso. Si aumenta o se acompaña de dolor importante, consultar.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">¿Qué hacer si aparece descamación?</button>
+          <div class="faq-answer">
+            <p>
+              No retirar la piel ni exfoliar. La descamación debe caer de forma natural.
+              Aplicar hidratación frecuente, bruma hidratante y productos de soporte de barrera.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">¿Cuándo lavar el rostro?</button>
+          <div class="faq-answer">
+            <p>
+              Se recomienda evitar el lavado inmediato después del tratamiento. Al día siguiente,
+              limpiar suavemente con agua fría o tibia y evitar limpiadores agresivos.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">¿Puedo usar maquillaje?</button>
+          <div class="faq-answer">
+            <p>
+              Evitar maquillaje pesado durante los primeros días. Si la piel está tranquila,
+              puede usarse maquillaje ligero después de aplicar protector solar.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">¿Qué productos evitar?</button>
+          <div class="faq-answer">
+            <p>
+              Evitar retinoides, ácidos exfoliantes, vitamina C muy activa, exfoliantes físicos,
+              limpiadores agresivos y productos con microagujas o espículas durante los primeros días.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">¿Cuándo combinar con láser, botox o rellenos?</button>
+          <div class="faq-answer">
+            <p>
+              Para combinar con otros procedimientos, se debe dejar un intervalo adecuado y seguir
+              la indicación del profesional. Como regla general, se recomienda espaciar procedimientos
+              para evitar sobreestimular la piel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="evidencia">
+      <div class="center">
+        <div class="eyebrow">Evidencia clínica</div>
+        <h2>Evaluaciones de IDENEL PEPTAXEL</h2>
+        <p>
+          IDENEL comunica evaluaciones orientadas a arrugas faciales, efecto lifting,
+          densidad cutánea, melasma, pigmentación, textura y poros. Esta información
+          debe presentarse como referencia cosmética y profesional, sin prometer resultados
+          idénticos en todas las pieles.
         </p>
       </div>
 
@@ -417,22 +891,67 @@
         <div class="card">
           <strong>Arrugas y firmeza</strong>
           <p>
-            Evaluaciones enfocadas en arrugas perioculares, surcos nasolabiales y efecto lifting.
+            Evaluaciones enfocadas en líneas finas, zona periocular, surcos nasolabiales
+            y apariencia de firmeza.
           </p>
         </div>
 
         <div class="card">
           <strong>Textura y poros</strong>
           <p>
-            Protocolos observados en relación con textura cutánea y apariencia de poros.
+            Observación de textura cutánea, poros visibles y apariencia general de la piel.
           </p>
         </div>
 
         <div class="card">
           <strong>Manchas y luminosidad</strong>
           <p>
-            Evaluaciones vinculadas a melasma, pigmentación y aspecto general de la piel.
+            Evaluaciones vinculadas a melasma, pigmentación visible y tono irregular.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="videos" class="alt">
+      <div class="center">
+        <div class="eyebrow">Videos profesionales</div>
+        <h2>Material de aplicación y capacitación</h2>
+        <p>
+          En la página pública revisada no aparecen videos incrustados visibles. Dejamos esta
+          sección preparada para subir videos de aplicación profesional, mezcla y antes/después
+          cuando estén disponibles.
+        </p>
+      </div>
+
+      <div class="video-grid">
+        <div class="video-card">
+          <div>
+            <div class="video-placeholder">Video próximamente</div>
+            <h3>Mezcla profesional</h3>
+            <p>
+              Espacio para video de mezcla de polvo + concentrado según protocolo.
+            </p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div>
+            <div class="video-placeholder">Video próximamente</div>
+            <h3>Aplicación profesional</h3>
+            <p>
+              Espacio para video de aplicación tópica profesional con técnica correcta.
+            </p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div>
+            <div class="video-placeholder">Video próximamente</div>
+            <h3>Antes y después</h3>
+            <p>
+              Espacio para resultados visuales autorizados y material comercial.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -443,7 +962,8 @@
         <h2>Producto orientado a profesionales</h2>
         <p>
           PEPTAXEL está pensado para protocolos profesionales realizados por personas capacitadas.
-          Para información comercial, protocolos y disponibilidad en Chile, contacta a IDENEL Chile.
+          La información de esta página es comercial y educativa; no reemplaza la capacitación,
+          evaluación de piel ni indicación del profesional tratante.
         </p>
       </div>
     </section>
@@ -454,11 +974,11 @@
         <h2>Consulta disponibilidad profesional</h2>
         <p>
           Escríbenos por WhatsApp para información comercial, capacitación,
-          protocolos profesionales y venta en Chile.
+          protocolos profesionales y disponibilidad en Chile.
         </p>
 
         <div class="buttons">
-          <a href="https://wa.me/56944499756?text=Hola,%20quiero%20información%20sobre%20IDENEL%20Peptaxel" class="btn btn-dark">
+          <a href="https://wa.me/56944499756?text=Hola,%20quiero%20información%20sobre%20IDENEL%20PEPTAXEL" class="btn btn-dark">
             Hablar por WhatsApp
           </a>
         </div>
@@ -467,7 +987,7 @@
 
   </main>
 
-  <a href="https://wa.me/56944499756?text=Hola,%20quiero%20información%20sobre%20IDENEL%20Peptaxel" class="whatsapp">
+  <a href="https://wa.me/56944499756?text=Hola,%20quiero%20información%20sobre%20IDENEL%20PEPTAXEL" class="whatsapp">
     WhatsApp
   </a>
 
@@ -476,6 +996,18 @@
     <p>Cosmética coreana profesional.</p>
     <p>Distribuido en Chile por Smart Medical Lab S.P.A.</p>
   </footer>
+
+  <script>
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+      const button = item.querySelector(".faq-question");
+
+      button.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+  </script>
 
 </body>
 </html>
