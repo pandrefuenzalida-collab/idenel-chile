@@ -3,324 +3,606 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IDENEL Chile | Cosmética Coreana Profesional</title>
+  <title>IDENEL Chile | Cosmética Coreana Profesional · Altum™ Peptide</title>
+
+  <meta name="description" content="IDENEL Chile: cosmética coreana profesional con tecnología Altum™ Peptide y microespículas. Línea profesional para cabina y cuidado en casa. Distribuido por Smart Medical Lab S.P.A. Despachos a todo Chile.">
+  <meta name="theme-color" content="#2b2b2d">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IDENEL Chile | Cosmética Coreana Profesional">
+  <meta property="og:description" content="Tecnología Altum™ Peptide y microespículas. Soluciones profesionales para cada necesidad de tu piel.">
+  <meta property="og:url" content="https://pandrefuenzalida-collab.github.io/idenel-chile/">
+  <meta property="og:image" content="https://pandrefuenzalida-collab.github.io/idenel-chile/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ffffff'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='19' fill='%232b2b2d' text-anchor='middle' letter-spacing='0.5'%3EI%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f8f4ef;
-      color: #1d1d1d;
+    :root{
+      --paper:#f5f4f2;
+      --white:#ffffff;
+      --ink:#2b2b2d;
+      --muted:#6f6f6e;
+      --soft:#8f8f8e;
+      --line:#e4e2dd;
+      --silver:#aab0b4;
+      --wa:#25d366;
+      --violet:#7a6a9e;
+      --green:#5c8a5e;
+      --amber:#c69a4e;
+      --orange:#d98b45;
+      --serif:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
     }
 
-    header {
-      background: white;
-      padding: 22px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #e8ded4;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      font-weight:300;
+      color:var(--ink);
+      background:var(--white);
+      line-height:1.7;
+      -webkit-font-smoothing:antialiased;
     }
 
-    .logo {
-      font-size: 26px;
-      font-weight: bold;
-      letter-spacing: 1px;
+    section[id],[id]{scroll-margin-top:92px;}
+
+    /* ---------- Tipografía ---------- */
+    h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:.5px;margin:0;}
+    h1{font-size:clamp(44px,7vw,86px);line-height:1.02;font-weight:500;}
+    h2{font-size:clamp(30px,4.4vw,50px);line-height:1.08;}
+    h3{font-size:22px;line-height:1.25;}
+    p{margin:0 0 18px;color:var(--muted);font-size:16px;}
+
+    .eyebrow{
+      font-family:var(--sans);
+      text-transform:uppercase;
+      letter-spacing:3.5px;
+      font-size:11.5px;
+      font-weight:500;
+      color:var(--soft);
+      margin-bottom:20px;
     }
 
-    .logo span {
-      color: #b89b6b;
-      font-weight: normal;
-    }
+    /* Divisor con rombo (firma de la marca) */
+    .divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 0 30px;}
+    .divider.left{justify-content:flex-start;}
+    .divider .line{height:1px;width:64px;background:var(--silver);opacity:.55;}
+    .divider .dot{width:7px;height:7px;background:var(--silver);transform:rotate(45deg);}
 
-    nav a {
-      margin-left: 24px;
-      text-decoration: none;
-      color: #1d1d1d;
-      font-size: 14px;
-      font-weight: 500;
-    }
+    /* ---------- Layout ---------- */
+    .wrap{max-width:1180px;margin:0 auto;padding:0 7%;}
+    section{padding:100px 0;}
+    section.paper{background:var(--paper);}
+    .center{text-align:center;max-width:720px;margin:0 auto;}
+    .center .divider{justify-content:center;}
 
-    .hero {
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-      padding: 70px 8%;
-      background: linear-gradient(135deg, #ffffff 0%, #f4e9dd 100%);
+    /* ---------- Header ---------- */
+    header{
+      position:sticky;top:0;z-index:40;
+      background:rgba(255,255,255,.9);
+      backdrop-filter:saturate(180%) blur(12px);
+      border-bottom:1px solid var(--line);
     }
+    .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 7%;}
+    .logo{font-family:var(--serif);font-size:27px;font-weight:600;letter-spacing:5px;color:var(--ink);text-decoration:none;line-height:1;}
+    .logo small{font-family:var(--sans);font-size:9.5px;letter-spacing:4px;font-weight:500;color:var(--soft);display:block;margin-top:3px;text-align:center;}
+    nav{display:flex;align-items:center;gap:30px;}
+    nav a{font-family:var(--sans);text-decoration:none;color:var(--ink);font-size:12.5px;font-weight:400;letter-spacing:.6px;transition:color .2s;}
+    nav a:hover{color:var(--soft);}
 
-    .hero-text {
-      max-width: 620px;
+    .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:24px;height:1.5px;background:var(--ink);margin:5px 0;transition:.25s;}
+    .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+    .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+    .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+    /* ---------- Botones ---------- */
+    .btn{
+      display:inline-flex;align-items:center;gap:9px;
+      font-family:var(--sans);font-size:12.5px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;
+      padding:15px 30px;border-radius:2px;text-decoration:none;cursor:pointer;border:1px solid transparent;
+      transition:transform .15s,background .25s,color .25s,border-color .25s;
     }
+    .btn:hover{transform:translateY(-2px);}
+    .btn-dark{background:var(--ink);color:#fff;}
+    .btn-dark:hover{background:#000;}
+    .btn-line{border-color:var(--ink);color:var(--ink);background:transparent;}
+    .btn-line:hover{background:var(--ink);color:#fff;}
+    .btn-wa{background:var(--wa);color:#fff;}
+    .btn-wa:hover{background:#1fb457;}
+    .btn svg{width:16px;height:16px;flex:none;}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;}
 
-    .eyebrow {
-      color: #b89b6b;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 16px;
+    /* ---------- Hero ---------- */
+    .hero{
+      position:relative;overflow:hidden;
+      padding:120px 0 110px;
+      background:radial-gradient(120% 90% at 78% 12%, #ffffff 0%, #eef0f1 45%, #e6e8ea 100%);
     }
-
-    h1 {
-      font-size: 76px;
-      line-height: 0.95;
-      margin: 0 0 22px;
+    .hero::after{
+      content:"";position:absolute;inset:0;pointer-events:none;
+      background:radial-gradient(closest-side at 82% 30%, rgba(255,255,255,.85), transparent 70%);
     }
+    .hero .wrap{position:relative;z-index:2;}
+    .hero-text{max-width:680px;}
+    .hero h1{margin-bottom:24px;}
+    .hero p{font-size:18px;max-width:540px;color:#55554f;}
 
-    h2 {
-      font-size: 34px;
-      line-height: 1.15;
-      font-weight: 400;
-      margin: 0 0 24px;
+    /* ---------- Tech cards ---------- */
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:60px;}
+    .tcard{background:var(--white);border:1px solid var(--line);border-radius:3px;padding:38px 32px;transition:transform .2s,box-shadow .2s;}
+    .tcard:hover{transform:translateY(-4px);box-shadow:0 24px 50px rgba(43,43,45,.07);}
+    .tcard .num{font-family:var(--serif);font-size:15px;letter-spacing:3px;color:var(--silver);text-transform:uppercase;margin-bottom:16px;}
+    .tcard h3{margin-bottom:12px;}
+    .tcard p{margin-bottom:0;font-size:15px;}
+
+    /* ---------- Clinical strip ---------- */
+    .clinic{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+    .clinic img{width:100%;border-radius:4px;border:1px solid var(--line);}
+    .clinic .note{font-size:12.5px;color:var(--soft);font-style:italic;margin-top:14px;}
+
+    /* ---------- Profesional protocolos ---------- */
+    .proto{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px;}
+    .pcard{border:1px solid var(--line);border-radius:3px;padding:36px 30px;background:var(--white);}
+    .pcard .tag{font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--soft);margin-bottom:14px;}
+    .pcard h3{margin-bottom:12px;}
+    .pcard p{margin-bottom:0;font-size:15px;}
+
+    /* ---------- Selector "¿Qué necesita tu piel?" ---------- */
+    .concern-chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:44px;}
+    .chip{
+      font-family:var(--sans);font-size:13px;letter-spacing:.8px;font-weight:400;
+      padding:12px 24px;border-radius:40px;border:1px solid var(--line);background:var(--white);color:var(--ink);
+      cursor:pointer;transition:.2s;
     }
-
-    p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: #5e5e5e;
+    .chip:hover{border-color:var(--silver);}
+    .chip.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+    .rec{
+      background:var(--white);border:1px solid var(--line);border-radius:4px;
+      max-width:860px;margin:0 auto;padding:48px 46px;
+      display:grid;grid-template-columns:8px 1fr;gap:34px;align-items:start;
     }
+    .rec .accent{width:8px;border-radius:4px;align-self:stretch;background:var(--silver);transition:background .3s;}
+    .rec .rec-kicker{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--soft);margin-bottom:10px;}
+    .rec h3{font-size:28px;margin-bottom:8px;}
+    .rec .why{font-size:15.5px;color:var(--muted);margin-bottom:26px;}
+    .rec .lines{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:30px;}
+    .rec .lines .l-lab{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);margin-bottom:6px;}
+    .rec .lines .l-val{font-family:var(--serif);font-size:20px;color:var(--ink);line-height:1.3;}
+    .rec .rec-cta{margin-top:4px;}
 
-    .buttons {
-      margin-top: 34px;
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
+    /* ---------- Productos ---------- */
+    .prods{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:58px;}
+    .prod{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--white);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;}
+    .prod:hover{transform:translateY(-5px);box-shadow:0 26px 55px rgba(43,43,45,.08);}
+    .prod .ph{aspect-ratio:4/3;background:linear-gradient(135deg,#fff 0%,#edeeef 100%);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+    .prod .ph img{width:100%;height:100%;object-fit:cover;}
+    .prod .ph .ph-note{color:#b7bbbd;font-size:13px;text-align:center;padding:18px;}
+    .prod .body{padding:30px 28px 32px;display:flex;flex-direction:column;flex:1;}
+    .prod .tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--soft);margin-bottom:10px;}
+    .prod h3{margin-bottom:10px;}
+    .prod p{font-size:14.5px;flex:1;}
+    .prod .btn{align-self:flex-start;margin-top:16px;}
+
+    /* ---------- Video ---------- */
+    .video-embed{max-width:920px;margin:52px auto 0;position:relative;padding-bottom:51.7%;height:0;border-radius:5px;overflow:hidden;border:1px solid var(--line);}
+    .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
+    /* ---------- Contacto ---------- */
+    .contact{background:var(--ink);color:#fff;text-align:center;}
+    .contact .eyebrow{color:#9a9a99;}
+    .contact h2{color:#fff;}
+    .contact p{color:#c7c7c4;max-width:600px;margin-left:auto;margin-right:auto;}
+    .contact .divider .line,.contact .divider .dot{background:#5a5a5a;}
+    .contact .ship{font-size:12.5px;letter-spacing:1px;color:#8f8f8d;margin-top:30px;text-transform:uppercase;}
+
+    /* ---------- Footer ---------- */
+    footer{background:#111;color:#fff;padding:52px 0;text-align:center;}
+    footer .logo{color:#fff;}
+    footer p{color:#8a8a88;font-size:13px;margin:8px 0 0;}
+
+    /* ---------- WhatsApp flotante ---------- */
+    .whatsapp{
+      position:fixed;right:22px;bottom:22px;z-index:50;
+      background:var(--wa);color:#fff;padding:14px 22px;border-radius:40px;
+      text-decoration:none;font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.5px;
+      box-shadow:0 14px 34px rgba(0,0,0,.22);display:inline-flex;align-items:center;gap:9px;transition:transform .15s;
     }
+    .whatsapp:hover{transform:translateY(-2px);}
+    .whatsapp svg{width:19px;height:19px;}
 
-    .btn {
-      padding: 15px 28px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-    }
+    a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px;}
 
-    .btn-dark {
-      background: #111;
-      color: white;
-    }
-
-    .btn-light {
-      border: 1px solid #111;
-      color: #111;
-    }
-
-    section {
-      padding: 90px 8%;
-      background: white;
-    }
-
-    section.alt {
-      background: #f8f4ef;
-    }
-
-    .center {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 50px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid #e8ded4;
-      padding: 34px;
-      border-radius: 24px;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      font-size: 23px;
-    }
-
-    .contact {
-      background: #111;
-      color: white;
-      text-align: center;
-    }
-
-    .contact p {
-      color: #d8d8d8;
-    }
-
-    .whatsapp {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      background: #25d366;
-      color: white;
-      padding: 14px 22px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-    }
-
-    footer {
-      background: #050505;
-      color: white;
-      padding: 40px 8%;
-      text-align: center;
-    }
-
-    footer p {
-      color: #bdbdbd;
-      font-size: 14px;
-    }
-
-    @media (max-width: 800px) {
-      nav {
-        display: none;
+    /* ---------- Responsive ---------- */
+    @media(max-width:860px){
+      .nav-toggle{display:block;}
+      nav{
+        position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);
+        flex-direction:column;align-items:stretch;gap:0;padding:8px 7% 20px;display:none;
       }
-
-      .hero {
-        padding: 60px 6%;
-      }
-
-      h1 {
-        font-size: 48px;
-      }
-
-      h2 {
-        font-size: 26px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
+      nav.open{display:flex;}
+      nav a{padding:15px 0;border-bottom:1px solid var(--line);font-size:15px;}
+      section{padding:72px 0;}
+      .hero{padding:80px 0 76px;}
+      .grid3,.proto,.prods{grid-template-columns:1fr;}
+      .clinic{grid-template-columns:1fr;gap:32px;}
+      .rec{grid-template-columns:1fr;padding:34px 26px;}
+      .rec .accent{width:100%;height:6px;}
+      .rec .lines{grid-template-columns:1fr;gap:16px;}
     }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;}}
   </style>
 </head>
 
 <body>
 
   <header>
-    <div class="logo">IDENEL<span> Chile</span></div>
-    <nav>
-      <a href="#altum">Altum™ Peptide</a>
-      <a href="#profesional">Profesional</a>
-      <a href="#productos">Productos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+    <div class="bar">
+      <a href="#top" class="logo">IDENEL<small>CHILE</small></a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu">
+        <a href="#tecnologia">Tecnología</a>
+        <a href="#profesional">Profesional</a>
+        <a href="#piel">¿Qué necesita tu piel?</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main id="top">
 
-    <div class="hero">
-      <div class="hero-text">
-        <div class="eyebrow">Cosmética coreana profesional</div>
-        <h1>IDENEL Chile</h1>
-        <h2>La nueva generación de cuidado antienvejecimiento profesional</h2>
-        <p>
-          Tecnología avanzada con Altum™ Peptide y microespículas refinadas,
-          diseñada para profesionales de la estética y rutinas de cuidado en casa.
-        </p>
-
-        <div class="buttons">
-          <a href="#productos" class="btn btn-dark">Ver productos</a>
-          <a href="#contacto" class="btn btn-light">Hazte socio</a>
-        </div>
-      </div>
-    </div>
-
-    <section id="altum">
-      <div class="center">
-        <div class="eyebrow">Tecnología exclusiva</div>
-        <h2>Altum™ Peptide</h2>
-        <p>
-          Altum™ Peptide combina péptidos avanzados con tecnología de microespículas
-          refinadas para favorecer la entrega de activos cosméticos en la piel.
-        </p>
-      </div>
-    </section>
-
-    <section id="profesional" class="alt">
-      <div class="center">
-        <div class="eyebrow">Línea profesional</div>
-        <h2>Tratamientos para cabina</h2>
-        <p>
-          Programas profesionales personalizables según las necesidades de cada piel.
-        </p>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Aging & Anti-wrinkle</h3>
-          <p>Protocolos enfocados en signos visibles de envejecimiento y firmeza.</p>
-        </div>
-
-        <div class="card">
-          <h3>Regenerating & Calming</h3>
-          <p>Apoyo cosmético para pieles sensibles, reactivas o post tratamiento.</p>
-        </div>
-
-        <div class="card">
-          <h3>Brightening & Tone-Up</h3>
-          <p>Rutinas orientadas a luminosidad, tono uniforme y piel apagada.</p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-text">
+          <div class="eyebrow">Cosmética coreana profesional</div>
+          <h1>Ciencia coreana para tu mejor versión de piel</h1>
+          <p>
+            Tecnología Altum™ Peptide y microespículas refinadas para llevar los activos
+            cosméticos a mayor profundidad —sin agujas—, en protocolos profesionales de
+            cabina y rutinas de cuidado en casa.
+          </p>
+          <div class="buttons">
+            <a href="#piel" class="btn btn-dark">¿Qué necesita tu piel?</a>
+            <a href="#productos" class="btn btn-line">Ver productos</a>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- TECNOLOGÍA -->
+    <section id="tecnologia">
+      <div class="wrap">
+        <div class="center">
+          <div class="eyebrow">Tecnología exclusiva</div>
+          <div class="divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+          <h2>Altum™ Peptide</h2>
+          <p style="margin-top:22px;">
+            "Altum" significa <em>profundo</em> en latín. La tecnología une el péptido activo a
+            microespículas de esponja marina (RaphiTox™) que crean microcanales en la piel y
+            liberan el activo de forma gradual, favoreciendo una penetración muy superior a la
+            de un cosmético convencional.
+          </p>
+        </div>
+
+        <div class="grid3">
+          <div class="tcard">
+            <div class="num">01 · Entrega</div>
+            <h3>Microespículas RaphiTox™</h3>
+            <p>Espículas refinadas de origen marino que actúan como un sistema de entrega cosmética hacia la epidermis.</p>
+          </div>
+          <div class="tcard">
+            <div class="num">02 · Acción</div>
+            <h3>Liberación gradual 48–72 h</h3>
+            <p>Los microcanales permanecen activos durante días, permitiendo una absorción progresiva de los ingredientes.</p>
+          </div>
+          <div class="tcard">
+            <div class="num">03 · Formato</div>
+            <h3>No inyectable · tópico profesional</h3>
+            <p>Efecto tipo microneedling sin agujas ni sangre. Se trabaja como protocolo tópico aplicado por profesional.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTADOS CLÍNICOS -->
+    <section class="paper">
+      <div class="wrap">
+        <div class="clinic">
+          <div>
+            <div class="eyebrow">Respaldo de la marca</div>
+            <div class="divider left"><span class="line"></span><span class="dot"></span></div>
+            <h2>Resultados de ensayo clínico de 6 semanas</h2>
+            <p style="margin-top:22px;">
+              La marca reporta mejoras en firmeza, elasticidad, textura, hidratación, densidad
+              y reducción de arrugas tras seis semanas de uso, evaluadas en pruebas de aplicación
+              en humanos. La respuesta puede variar según cada tipo de piel y protocolo profesional.
+            </p>
+            <div class="buttons">
+              <a href="peptaxel.html" class="btn btn-dark">Ver PEPTAXEL</a>
+            </div>
+          </div>
+          <div>
+            <img src="peptaxel-resultados-clinicos.png" alt="Resultados de ensayo clínico IDENEL Peptaxel">
+            <p class="note">Material informativo de la marca. No constituye una promesa de resultado individual.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LÍNEA PROFESIONAL -->
+    <section id="profesional">
+      <div class="wrap">
+        <div class="center">
+          <div class="eyebrow">Línea profesional · uso en cabina</div>
+          <div class="divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+          <h2>Soluciones para cada necesidad</h2>
+          <p style="margin-top:22px;">
+            El programa PEPTAXEL combina un polvo (péptido Altum™) con un concentrado, en dos pasos
+            personalizables según el objetivo de cada piel.
+          </p>
+        </div>
+
+        <div class="proto">
+          <div class="pcard">
+            <div class="tag">Intensive · Morado</div>
+            <h3>Antiedad y firmeza</h3>
+            <p>Para arrugas, flacidez y pérdida de elasticidad. Apoyo cosmético a la firmeza y densidad de la piel madura.</p>
+          </div>
+          <div class="pcard">
+            <div class="tag">TR · Verde</div>
+            <h3>Piel con imperfecciones</h3>
+            <p>Trouble care para piel con tendencia acneica, textura irregular, poros visibles y sensibilidad.</p>
+          </div>
+          <div class="pcard">
+            <div class="tag">Brightening · Regen</div>
+            <h3>Luminosidad y calma</h3>
+            <p>Concentrados orientados a iluminación, tono uniforme y regeneración/calma según la combinación elegida.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ¿QUÉ NECESITA TU PIEL? -->
+    <section id="piel" class="paper">
+      <div class="wrap">
+        <div class="center">
+          <div class="eyebrow">Guía rápida</div>
+          <div class="divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+          <h2>¿Qué necesita tu piel?</h2>
+          <p style="margin-top:22px;">
+            Elige tu principal preocupación y te mostramos la combinación IDENEL sugerida.
+            La recomendación final siempre la define el profesional tratante.
+          </p>
+        </div>
+
+        <div class="concern-chips" role="tablist">
+          <button class="chip active" data-key="brillo" role="tab">Brillo / opacidad</button>
+          <button class="chip" data-key="manchas" role="tab">Manchas / tono</button>
+          <button class="chip" data-key="acne" role="tab">Acné / imperfecciones</button>
+          <button class="chip" data-key="edad" role="tab">Antiedad / firmeza</button>
+          <button class="chip" data-key="sensible" role="tab">Sensibilidad / recuperación</button>
+        </div>
+
+        <div class="rec" id="rec">
+          <div class="accent" id="rec-accent"></div>
+          <div>
+            <div class="rec-kicker" id="rec-kicker"></div>
+            <h3 id="rec-title"></h3>
+            <p class="why" id="rec-why"></p>
+            <div class="lines">
+              <div>
+                <div class="l-lab">En cabina</div>
+                <div class="l-val" id="rec-cabina"></div>
+              </div>
+              <div>
+                <div class="l-lab">En casa</div>
+                <div class="l-val" id="rec-casa"></div>
+              </div>
+            </div>
+            <div class="rec-cta">
+              <a href="#" class="btn btn-wa" id="rec-wa" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1s-.5-.1-.7.2-.8 1-.9 1.1-.4.2-.7 0a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5c0-.2 0-.4 0-.5l-1-2.2c-.2-.6-.4-.5-.6-.5h-.6a1 1 0 0 0-.8.4A3.3 3.3 0 0 0 5.7 9c0 1.4 1 2.8 1.2 3s2 3.2 5 4.5c2.6 1.1 3 .9 3.6.8s1.7-.7 2-1.4.3-1.3.2-1.4-.2-.2-.5-.3z"/><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8 8 0 1 1 12 20z"/></svg>
+                Consultar por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
     <section id="productos">
-      <div class="center">
-        <div class="eyebrow">Catálogo IDENEL Chile</div>
-        <h2>Productos destacados</h2>
-        <p>
-          Línea profesional y cuidado en casa para acompañar protocolos estéticos avanzados.
-        </p>
-      </div>
+      <div class="wrap">
+        <div class="center">
+          <div class="eyebrow">Catálogo IDENEL Chile</div>
+          <div class="divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+          <h2>Productos destacados</h2>
+        </div>
 
-      <div class="grid">
-        <div class="card">
-  <h3>Peptaxel Professional</h3>
-  <p>Programa profesional para protocolos personalizados en cabina.</p>
-  <a href="peptaxel.html" class="btn btn-dark">Ver producto</a>
-</div>
-        <div class="card">
-  <h3>Intensive Repair Essential Sheet Mask</h3>
-  <p>Mascarilla intensiva para hidratar, calmar y apoyar la recuperación cosmética.</p>
-  <a href="sheet-mask.html" class="btn btn-dark">Ver producto</a>
-</div>
-        <div class="card">
-          <h3>Daily Sun Serum</h3>
-          <p>Protección diaria ligera para complementar el cuidado posterior.</p>
+        <div class="prods">
+          <div class="prod">
+            <div class="ph"><img src="peptaxel-1.jpg" alt="IDENEL PEPTAXEL"></div>
+            <div class="body">
+              <div class="tag">Línea profesional</div>
+              <h3>PEPTAXEL</h3>
+              <p>Skin booster profesional con microespículas y péptido Altum™. Combinaciones personalizables por objetivo.</p>
+              <a href="peptaxel.html" class="btn btn-line">Ver producto</a>
+            </div>
+          </div>
+
+          <div class="prod">
+            <div class="ph"><img src="sheet-mask-1.jpg" alt="IDENEL Intensive Repair Essential Sheet Mask"></div>
+            <div class="body">
+              <div class="tag">Cuidado en casa</div>
+              <h3>Intensive Repair Sheet Mask</h3>
+              <p>Mascarilla intensiva con PDRN, glutatión y ceramidas para hidratar, calmar y reparar la barrera.</p>
+              <a href="sheet-mask.html" class="btn btn-line">Ver producto</a>
+            </div>
+          </div>
+
+          <div class="prod">
+            <div class="ph"><div class="ph-note">Imagen próximamente<br>(daily-sun-serum.jpg)</div></div>
+            <div class="body">
+              <div class="tag">Cuidado en casa</div>
+              <h3>Daily Sun Serum</h3>
+              <p>Protección diaria de textura ligera para complementar el cuidado posterior en la rutina.</p>
+              <a href="daily-sun-serum.html" class="btn btn-line">Ver producto</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contacto" class="contact">
-      <div class="center">
-        <div class="eyebrow">Distribución profesional</div>
-        <h2>Hazte socio IDENEL Chile</h2>
-        <p>
-          Accede a productos, capacitaciones, soporte comercial y beneficios para
-          centros estéticos, clínicas y profesionales.
-        </p>
+    <!-- VIDEO -->
+    <section class="paper">
+      <div class="wrap">
+        <div class="center">
+          <div class="eyebrow">Conoce la marca</div>
+          <div class="divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+          <h2>IDENEL en video</h2>
+        </div>
+        <div class="video-embed">
+          <iframe src="https://www.youtube-nocookie.com/embed/kxyrKNSXViQ" title="IDENEL" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
 
-        <div class="buttons" style="justify-content:center;">
-          <a href="https://wa.me/56944499756" class="btn btn-dark">Hablar por WhatsApp</a>
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact">
+      <div class="wrap">
+        <div class="center">
+          <div class="eyebrow">Distribución profesional</div>
+          <div class="divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+          <h2>Hazte socio IDENEL Chile</h2>
+          <p style="margin-top:22px;">
+            Acceso a productos, capacitaciones, protocolos profesionales y soporte comercial para
+            centros estéticos, clínicas y profesionales. Escríbenos y coordinamos disponibilidad,
+            precios y venta directa por WhatsApp.
+          </p>
+          <div class="buttons" style="justify-content:center;">
+            <a href="https://wa.me/56944499756?text=Hola%2C%20quiero%20informaci%C3%B3n%20profesional%20sobre%20IDENEL%20Chile"
+               class="btn btn-wa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1s-.5-.1-.7.2-.8 1-.9 1.1-.4.2-.7 0a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5c0-.2 0-.4 0-.5l-1-2.2c-.2-.6-.4-.5-.6-.5h-.6a1 1 0 0 0-.8.4A3.3 3.3 0 0 0 5.7 9c0 1.4 1 2.8 1.2 3s2 3.2 5 4.5c2.6 1.1 3 .9 3.6.8s1.7-.7 2-1.4.3-1.3.2-1.4-.2-.2-.5-.3z"/><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8 8 0 1 1 12 20z"/></svg>
+              Hablar por WhatsApp
+            </a>
+          </div>
+          <div class="ship">Despachos a todo Chile</div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <a href="https://wa.me/56944499756" class="whatsapp">WhatsApp</a>
+  <a href="https://wa.me/56944499756?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20IDENEL%20Chile"
+     class="whatsapp" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1s-.5-.1-.7.2-.8 1-.9 1.1-.4.2-.7 0a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5c0-.2 0-.4 0-.5l-1-2.2c-.2-.6-.4-.5-.6-.5h-.6a1 1 0 0 0-.8.4A3.3 3.3 0 0 0 5.7 9c0 1.4 1 2.8 1.2 3s2 3.2 5 4.5c2.6 1.1 3 .9 3.6.8s1.7-.7 2-1.4.3-1.3.2-1.4-.2-.2-.5-.3z"/><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8 8 0 1 1 12 20z"/></svg>
+    WhatsApp
+  </a>
 
   <footer>
-    <strong>IDENEL Chile</strong>
-    <p>Cosmética coreana profesional antienvejecimiento.</p>
-    <p>Distribuido en Chile por Smart Medical Lab S.P.A.</p>
+    <div class="wrap">
+      <a href="#top" class="logo">IDENEL<small>CHILE</small></a>
+      <p>Cosmética coreana profesional · Tecnología Altum™ Peptide</p>
+      <p>Distribuido en Chile por Smart Medical Lab S.P.A. · Despachos a todo Chile</p>
+    </div>
   </footer>
+
+  <script>
+    // Menú móvil
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+      toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Guía "¿Qué necesita tu piel?"
+    const DATA = {
+      brillo: {
+        color: 'var(--orange)',
+        kicker: 'Luminosidad',
+        title: 'Piel apagada, sin vitalidad',
+        why: 'Cuando la piel se ve opaca y cansada, el objetivo es devolver luminosidad y frescura al tono.',
+        cabina: 'PEPTAXEL · Brightening Concentrate',
+        casa: 'Intensive Repair Sheet Mask',
+        wa: 'Hola, mi piel se ve apagada y busco luminosidad. ¿Qué me recomiendan de IDENEL?'
+      },
+      manchas: {
+        color: 'var(--amber)',
+        kicker: 'Tono uniforme',
+        title: 'Manchas y tono desigual',
+        why: 'Los activos aclarantes (glutatión, ácido tranexámico, arbutina) llegan más profundo, donde se forma la pigmentación.',
+        cabina: 'PEPTAXEL · Intensive/TR + Brightening',
+        casa: 'Intensive Repair Sheet Mask',
+        wa: 'Hola, tengo manchas / tono desigual y quiero información de IDENEL para eso.'
+      },
+      acne: {
+        color: 'var(--green)',
+        kicker: 'Trouble care',
+        title: 'Acné e imperfecciones',
+        why: 'El polvo TR trabaja la piel con tendencia a imperfecciones; se combina con Brightening para marcas o Regen para calma.',
+        cabina: 'PEPTAXEL · TR + Brightening / Regen',
+        casa: 'Intensive Repair Sheet Mask',
+        wa: 'Hola, tengo piel con acné / imperfecciones y quiero saber qué IDENEL me sirve.'
+      },
+      edad: {
+        color: 'var(--violet)',
+        kicker: 'Firmeza',
+        title: 'Antiedad, arrugas y flacidez',
+        why: 'La combinación Intensive + Regen apoya firmeza, elasticidad y densidad, ideal para piel madura.',
+        cabina: 'PEPTAXEL · Intensive + Regen',
+        casa: 'Rutina de mantención en casa',
+        wa: 'Hola, busco tratamiento antiedad / firmeza. ¿Qué me recomiendan de IDENEL?'
+      },
+      sensible: {
+        color: 'var(--silver)',
+        kicker: 'Calma y barrera',
+        title: 'Sensibilidad y recuperación',
+        why: 'Para piel reactiva o post-procedimiento, el foco es calmar, hidratar y reforzar la barrera cutánea.',
+        cabina: 'PEPTAXEL · TR + Regen Concentrate',
+        casa: 'Intensive Repair Sheet Mask (PDRN, CICA, ceramidas)',
+        wa: 'Hola, tengo piel sensible / en recuperación y quiero información de IDENEL.'
+      }
+    };
+
+    const el = id => document.getElementById(id);
+    const WA = '56944499756';
+    function render(key){
+      const d = DATA[key];
+      el('rec-accent').style.background = d.color;
+      el('rec-kicker').textContent = d.kicker;
+      el('rec-title').textContent = d.title;
+      el('rec-why').textContent = d.why;
+      el('rec-cabina').textContent = d.cabina;
+      el('rec-casa').textContent = d.casa;
+      el('rec-wa').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(d.wa);
+    }
+    document.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        render(chip.dataset.key);
+      });
+    });
+    render('brillo');
+  </script>
 
 </body>
 </html>
